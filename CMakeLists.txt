@@ -1,6 +1,17 @@
-cmake_minimum_required(VERSION 4.2)
-project(adc_project C)
+cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_C_STANDARD 11)
+project(ADC_Project C)
 
-add_executable(adc_project main.c)
+set(CMAKE_C_STANDARD 99)
+
+add_executable(ADC_Project
+        main.c
+        adc.c
+        io.c
+        stats.c
+        analysis.c
+        report.c
+        fault.c
+)
+
+target_link_libraries(ADC_Project m)
